@@ -69,15 +69,12 @@ def find_password():
     except FileNotFoundError:
         messagebox.showinfo(title="ERROR", message="No Data File Found")
     else:
-        try:
+        if website in data:
             email = data[website]["email"]
             password = data[website]["password"]
-        except KeyError:
-            messagebox.showinfo(title=website, message="No Details for this website")
+            messagebox.showinfo(title=website, message=f"user/email:  {email}\nPassword:  {password}")
         else:
-            message = \
-                f"user/email:  {email}\nPassword:  {password}
-            messagebox.showinfo(title=website, message=message)
+            messagebox.showinfo(title=website, message="No Details for this website")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
