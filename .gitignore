@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,django
 
 .idea
+.env
 
 ### Django ###
 *.log
@@ -134,7 +135,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+day_32_send_email/.env
 .venv
 env/
 venv/
